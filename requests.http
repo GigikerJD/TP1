@@ -1,0 +1,16 @@
+
+
+GET http://localhost:8080/passagers
+
+###
+
+GET http://localhost:8080/passagers-with-passport
+
+###
+
+GET http://localhost:8080/passagers-with-idcard
+
+###
+
+GET http://localhost:8080/passager/1
+
