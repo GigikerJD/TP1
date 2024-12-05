@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALTN72 - Vue</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>Nom</th>
+            <th>Prénom</th>
+        </thead>
+
+        <tr th:each="passager : ${lesPassagers}">
+            <td th:text>{passager.prenom}</td>
+            <td th:text>{passager.nom}</td>
+        </tr>
+    </table>
+</body>
+</html>
