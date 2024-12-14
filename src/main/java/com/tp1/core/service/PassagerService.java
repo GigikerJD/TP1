@@ -57,19 +57,18 @@ public class PassagerService {
 
     public void modifyPassager(Integer id, PassagerEntite p) {
         Optional<PassagerEntite> recover = passagerRepository.findById(id);
-        if(recover.isPresent()){
+        if (recover.isPresent()) {
             PassagerEntite p1 = recover.get();
-            p1.setNom(p1.getNom());
-            p1.setPrenom(p1.getPrenom());
-            p1.setNumeroIdentite(p1.getNumeroIdentite());
-            p1.setNumeroReservation(p1.getNumeroReservation());
-            p1.setPieceIdentite(p1.getPieceIdentite());
-            p1.setCommentaires(p1.getCommentaires());
+            p1.setNom(p.getNom());
+            p1.setPrenom(p.getPrenom());
+            p1.setNumeroIdentite(p.getNumeroIdentite());
+            p1.setNumeroReservation(p.getNumeroReservation());
+            p1.setPieceIdentite(p.getPieceIdentite());
+            p1.setCommentaires(p.getCommentaires());
             passagerRepository.save(p1);
-            /*
-                Bean.Utils(new, old, ignored properties...)
-            */
-            System.out.println("Votre passager à modifier ses infos personnelles");
+            System.out.println("Votre passager a modifié ses infos personnelles");
+        } else {
+            System.err.println("Passager non trouvé pour l'ID : " + id);
         }
     }
 

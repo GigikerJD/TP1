@@ -10,11 +10,13 @@
         <thead>
             <th>Nom</th>
             <th>Prénom</th>
+            <th>Pièce d'identité</th>
         </thead>
 
         <tr th:each="passager : ${lesPassagers}">
-            <td th:text>{passager.prenom}</td>
-            <td th:text>{passager.nom}</td>
+            <td th:text="${passager.nom}"></td>
+            <td th:text="${passager.prenom}"></td>
+            <td th:text="${passager.piece_identite}"></td>
         </tr>
     </table>
 </body>
